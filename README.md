@@ -27,8 +27,9 @@ C-states | I am not sure what causes that, but on all distributives, except Ubun
 Device | ID | Reason
 ------ | -- | ------
 Fingerprint reader | 2808:a658 | no driver for the device
-Camera switch button | ... | ?
+Camera switch button + LED | ... | ?
 Screenshot button | ... | ?
+Microphone button (LED) | ... | ?
 ## Some additional information
 If you're using dual monitor setup, then you should probably switch to the dedicated graphics, because Wayland and X11 are lagging (like, really) with hybrid graphics. Not a laptop issue, but still. 
 
