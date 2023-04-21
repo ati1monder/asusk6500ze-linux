@@ -21,7 +21,7 @@ Sleep | Enter ```mem_sleep_default=deep``` in GRUB_CMDLINE_LINUX_DEFAULT | s2idl
 ## What works, but does it kinda shitty xd
 Thingy | Reason
 ------ | ------
-C-states | ~~I am not sure what causes that, but on all distributives, except Ubuntu, power state of the CPU doesn't go lower than C2. On Ubuntu, you're able to do that, though if you won't start the laptop without charger, it simply locks itself at C3 and doesn't go lower than that. Probably it's because of the ACPI states, I am not actually sure~~ Now, on Ubuntu 23.04, it simply locked at C3 and it doesn't go lower than that.
+C-states | It can't go lower than C3.
 GPU Fan(?) | It works, but you aren't able to tweak it nor set the fan levels
 ## What doesn't work
 Device | ID | Reason
