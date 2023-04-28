@@ -21,7 +21,7 @@ Sleep | Enter ```mem_sleep_default=deep``` in GRUB_CMDLINE_LINUX_DEFAULT | s2idl
 ## What works, but does it kinda shitty xd
 Thingy | Reason
 ------ | ------
-C-states | It can't go lower than C3
+C-states | They're going to work properly only if you will start the laptop without the charger
 GPU Fan(?) | It works, but you aren't able to tweak it nor set the fan levels
 ## What doesn't work
 Device | ID | Reason
