@@ -1,5 +1,5 @@
 # asusk6500ze-linux
-This repo shows how well does Asus Vivobook Pro 15 (K6500ZE) support Linux, lol
+This repo shows how well does Asus Vivobook Pro 15 (K6500ZE) support Linux.
 
 # Specs
 Hardware | Device
@@ -16,12 +16,12 @@ Screen | 15.6' 1920x1080 OLED
 Thingy | Fix | ?
 ------ | --- | ---
 Audio | ```hda-verb /dev/snd/hwC0D0 0x20 0x500 0x1b && hda-verb /dev/snd/hwC0D0 0x20 0x477 0x4a4b && hda-verb /dev/snd/hwC0D0 0x20 0x500 0xf && hda-verb /dev/snd/hwC0D0 0x20 0x477 0x74``` | ...
-CPU throttling | Install [*throttled*](https://github.com/erpalma/throttled) and change the limits to 115W | For some reason, CPU is throttled when it goes above 27W, lol
-Sleep | Enter ```mem_sleep_default=deep``` in GRUB_CMDLINE_LINUX_DEFAULT | s2idle consumes too much battery
-## What works, but does it kinda shitty xd
+CPU throttling | Install [*throttled*](https://github.com/erpalma/throttled) and change the limits to 115W | For some reason, CPU is throttled when it goes above 27W
+Sleep | Enter ```mem_sleep_default=deep``` in GRUB_CMDLINE_LINUX_DEFAULT | s2idle consumes too much battery (breaks C-States if used)
+## What works, but does it weirdly
 Thingy | Reason
 ------ | ------
-C-states | They're going to work properly only if you will start the laptop without the charger
+C-States | They're going to work properly only if you will start the laptop without the charger. If you're going to launch your laptop **with** a charger, prepare to weirdass bugs with it, although it won't affect the actual performance. Also, c-states won't go below C2 after reboot
 GPU Fan(?) | It works, but you aren't able to tweak it nor set the fan levels
 ## What doesn't work
 Device | ID | Reason
