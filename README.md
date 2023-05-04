@@ -17,7 +17,9 @@ Thingy | Fix | ?
 ------ | --- | ---
 Audio | ```hda-verb /dev/snd/hwC0D0 0x20 0x500 0x1b && hda-verb /dev/snd/hwC0D0 0x20 0x477 0x4a4b && hda-verb /dev/snd/hwC0D0 0x20 0x500 0xf && hda-verb /dev/snd/hwC0D0 0x20 0x477 0x74``` | ...
 CPU throttling | Install [*throttled*](https://github.com/erpalma/throttled) and change the limits to 115W | For some reason, CPU is throttled when it goes above 27W
-Sleep | Enter ```mem_sleep_default=deep``` in GRUB_CMDLINE_LINUX_DEFAULT | s2idle consumes too much battery (breaks C-States if used)
+Sleep | Enter ```mem_sleep_default=deep``` in GRUB_CMDLINE_LINUX_DEFAULT* | s2idle consumes too much battery
+
+<sub>*breaks C-States if used</sub>
 ## What works, but does it weirdly
 Thingy | Reason
 ------ | ------
