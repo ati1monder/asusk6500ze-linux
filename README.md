@@ -17,13 +17,13 @@ Thingy | Fix | ?
 ------ | --- | ---
 Audio | ```hda-verb /dev/snd/hwC0D0 0x20 0x500 0x1b && hda-verb /dev/snd/hwC0D0 0x20 0x477 0x4a4b && hda-verb /dev/snd/hwC0D0 0x20 0x500 0xf && hda-verb /dev/snd/hwC0D0 0x20 0x477 0x74``` | ...
 CPU throttling | Install [*throttled*](https://github.com/erpalma/throttled) and change the limits to 115W | For some reason, CPU is throttled when it goes above 27W
-Sleep | Enter ```mem_sleep_default=deep``` in GRUB_CMDLINE_LINUX_DEFAULT* | s2idle consumes too much battery
+Sleep* | Enter ```mem_sleep_default=deep``` in GRUB_CMDLINE_LINUX_DEFAULT | s2idle consumes a bit more battery compared to deep sleep
 
-<sub>*breaks C-States if used</sub>
+<sub>*breaks PKG C-States if used</sub>
 ## What works, but does it weirdly
 Thingy | Reason
 ------ | ------
-C-States | They're going to work properly only if you will start the laptop without the charger. If you're going to launch your laptop **with** a charger, prepare to weirdass bugs with it, although it won't affect the actual performance. Also, c-states won't go below C2 after reboot
+PKG C-States | They're going to work properly only if you will start the laptop without the charger. If you're going to launch your laptop **with** a charger, prepare to weirdass bugs with it, although it won't affect the actual performance. Also, they won't go below C2 after reboot
 GPU Fan(?) | It works, but you aren't able to tweak it nor set the fan levels
 ## What doesn't work
 Device | ID | Reason
@@ -33,6 +33,8 @@ Camera switch button + LED | ... | ?
 Screenshot button | ... | ?
 Microphone button (LED) | ... | ?
 ## Some additional information
+To make this laptop able to enter C9/C10 states more frequently add ```i915.enable_psr=1``` to kernel parameters.
+
 If you're using dual monitor setup, then you should probably switch to the dedicated graphics, because Wayland and X11 are lagging (like, really) with hybrid graphics. Not a laptop issue, but still. 
 
 To change GPU power limit, you need to write `sudo nvidia-smi -pl (amount)`.
