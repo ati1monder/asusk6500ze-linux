@@ -10,8 +10,6 @@ RAM | 16 GB DDR5
 SSD | NVME INTEL SSDPEKNW010T8 1 TB
 Screen | 15.6' 1920x1080 OLED
 
-## What works
-```Everything, that isn't listed in the "doesn't work" section, lmao```
 ## What works, but with a little bit of a tweaking
 Thingy | Fix | ?
 ------ | --- | ---
