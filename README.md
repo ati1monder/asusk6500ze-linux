@@ -24,9 +24,9 @@ GPU Fan | You can check the speed of the fan, but you aren't able to tweak it no
 Device | ID | Reason
 ------ | -- | ------
 Fingerprint reader | 2808:a658 | no driver for the device
-Camera switch button + LED | ... | ?
-Screenshot button | ... | ?
-Microphone button (LED) | ... | ?
+Camera switch button + LED | ... | the button and the LED aren't binded to the action
+Screenshot button | ... | the button isn't binded to the action
+Microphone button (LED) | ... | the LED isn't binded to the action
 ## Some additional information
 To make this laptop able to enter C9/C10 states more frequently add ```i915.enable_psr=1``` to kernel parameters.
 
