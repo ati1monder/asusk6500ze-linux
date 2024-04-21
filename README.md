@@ -19,6 +19,7 @@ CPU throttling | Install [*throttled*](https://github.com/erpalma/throttled) and
 Thingy | Reason
 ------ | ------
 PKG C-States | They're going to work properly only if you will start the laptop without the charger. If you're going to launch your laptop **with** a charger, prepare to weirdass bugs with it, although it won't affect the actual performance. Also, they won't go below C3 after reboot
+CPU Fan | You can check the speed of the fan, but you aren't able to set the fan level other than full or auto
 GPU Fan | You can check the speed of the fan, but you aren't able to tweak it nor set the fan levels
 ## What doesn't work
 Device | ID | Reason
